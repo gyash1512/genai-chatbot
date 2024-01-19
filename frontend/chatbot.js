@@ -5,7 +5,7 @@ const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 
 let userMessage = null; // Variable to store user's message
-const API_KEY = "PASTE-YOUR-API-KEY"; // Paste your API key here
+const API_KEY = "AIzaSyCVrjd8JXl1CDUlsuKxqBjBojieVcPaRUk"; // Paste your API key here
 const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
@@ -19,30 +19,32 @@ const createChatLi = (message, className) => {
 }
 
 const generateResponse = (chatElement) => {
-    const API_URL = "https://api.openai.com/v1/chat/completions";
     const messageElement = chatElement.querySelector("p");
 
-    // Define the properties and message for the API request
+    // Replace the OpenAI API code with code to communicate with your Python server
     const requestOptions = {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${API_KEY}`
         },
         body: JSON.stringify({
-            model: "gpt-3.5-turbo",
-            messages: [{role: "user", content: userMessage}],
+            prompt: userMessage,  // Assuming userMessage is defined
         })
     }
 
-    // Send POST request to API, get response and set the reponse as paragraph text
-    fetch(API_URL, requestOptions).then(res => res.json()).then(data => {
-        messageElement.textContent = data.choices[0].message.content.trim();
-    }).catch(() => {
-        messageElement.classList.add("error");
-        messageElement.textContent = "Oops! Something went wrong. Please try again.";
-    }).finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
+    // Send POST request to your Python server, get response, and set the response as paragraph text
+    fetch("http://localhost:5000/generate_response", requestOptions)
+        .then(res => res.json())
+        .then(data => {
+            messageElement.textContent = data.response.trim();
+        })
+        .catch(() => {
+            messageElement.classList.add("error");
+            messageElement.textContent = "Oops! Something went wrong. Please try again.";
+        })
+        .finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
 }
+
 
 const handleChat = () => {
     userMessage = chatInput.value.trim(); // Get user entered message and remove extra whitespace
