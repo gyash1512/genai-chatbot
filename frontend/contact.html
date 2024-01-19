@@ -39,7 +39,31 @@
                   mobile: mobile,
                   message: message
               });
+              const requestOptions = {
+              method: "POST",
+              headers: {
+              "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                  firstName: firstName,
+                  lastName: lastName,
+                  email: email,
+                  mobile: mobile,
+                  message: message,  // Assuming userMessage is defined
+              })
+    }
+              fetch("http://localhost:5000/contact_us", requestOptions)
+              .then(res => res.json())
+              .then(data => {
+                  messageElement.textContent = data.response.trim();
+              })
+              .catch(() => {
+                  messageElement.classList.add("error");
+                  messageElement.textContent = "Oops! Something went wrong. Please try again.";
+              })
+              .finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));  
 
+              
               // Reset the form if needed
               contactForm.reset();
           }
