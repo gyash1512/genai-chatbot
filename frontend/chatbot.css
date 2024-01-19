@@ -23,7 +23,7 @@ body {
 } */
 .header{
     text-align: center;
-    margin-top: 100px;
+    margin-top: 30px;
     margin-left: 800px;
 }
 
@@ -215,7 +215,7 @@ header h2 {
   border-radius: 10px;
   height:50px;
   width:100px;
-  background-color: #724ae8;
+  background-color:rgb(115, 228, 115);
   color:whitesmoke;
   font-size: 20px;
   font-weight: bold;
@@ -229,3 +229,33 @@ header h2 {
  
   
 }
+.header{
+  margin-bottom: 200px;
+}
+#p2{
+  color:#721c24;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#p1{
+  color:cadetblue;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-right: 10px;
+}
+#h3{
+  color:rgb(5, 107, 5);
+  font-weight: bold;
+
+}
+/* footer */
+
+
+
+
+
+
+  
+  
+

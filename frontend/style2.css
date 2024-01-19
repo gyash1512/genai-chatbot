@@ -75,8 +75,9 @@ body {
 }
 
 .nav__logo {
-  font-size: 1.5rem;
-  font-weight: 600;
+  /* font-size: 1.5rem; */
+  font-weight: 1000;
+  font-size: 35px;
   color: var(--white);
 }
 
@@ -90,6 +91,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  font-weight: bold;
+  
 }
 
 .link a {
@@ -546,3 +549,15 @@ body {
     gap: 1rem;
   }
 }
+#sub{
+  font-size: 20px;
+}
+
+  /* background-color: #b9fbc0; */
+  #cg{
+    font-weight: bold;
+  }
+  
+
+  
+  
