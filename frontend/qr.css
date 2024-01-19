@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height:100vh;
+    width: 100%;
+    background-color: hsl(212, 45%, 89%);
+    overflow: hidden;
+}
+
+.container{
+    background-color: white;
+    border-radius: 1rem;
+    font-family: 'outfit';
+    width: 300px;
+    height: 450px;
+    margin:  3rem auto;
+    padding: 1rem;
+}
+
+img{
+    
+    border-radius: 10px;
+    width: 100%;
+    height: 260px;
+}
+
+h2{
+    margin: 16px 0;
+    font-size: 17px;
+    font-weight: bolder;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+p{
+    font-size: 15px;
+    padding: 0 1rem;
+    text-align: center;
+
+}
+
+footer{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
