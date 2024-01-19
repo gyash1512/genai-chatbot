@@ -33,7 +33,7 @@ const generateResponse = (chatElement) => {
     }
 
     // Send POST request to your Python server, get response, and set the response as paragraph text
-    fetch("http://localhost:5000/generate_response", requestOptions)
+    fetch("http://localhost:5000/contact_us", requestOptions)
         .then(res => res.json())
         .then(data => {
             messageElement.textContent = data.response.trim();
