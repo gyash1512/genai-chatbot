@@ -210,3 +210,22 @@ header h2 {
     display: block;
   }
 }
+.history{
+  border: 2px solid;
+  border-radius: 10px;
+  height:50px;
+  width:100px;
+  background-color: #724ae8;
+  color:whitesmoke;
+  font-size: 20px;
+  font-weight: bold;
+   position: fixed; 
+  bottom: 30px;
+  right: 100px;
+  
+ 
+
+  
+ 
+  
+}

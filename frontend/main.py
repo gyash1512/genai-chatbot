@@ -3,7 +3,7 @@ import sys
 import pkg_resources
 
 def install_libraries():
-    required_libraries = ["google-generativeai", "Flask", "flask-cors"]
+    required_libraries = ["google-generativeai", "Flask", "flask-cors","openpyxl"]
 
     installed_libraries = {package.project_name.lower(): package.version for package in pkg_resources.working_set}
     
