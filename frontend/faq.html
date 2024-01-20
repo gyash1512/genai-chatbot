@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="faq.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- <p>The Begninning of a New Asset class</p> -->
+      <h1>Frequently Asked Questions</h1>
+
+      <div class="faq">
+        <button class="accordion">
+          What is NutriGuide?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            NutriGuide is an advanced Webpage using Generative AI to aid health-conscious choices. It scans and analyzes menus with OCR, classifies items based on nutritional parameters, and employs a chatbot for personalized recommendations. With a user-friendly UI and a focus on data privacy, NutriGuide merges technology and nutrition seamlessly for informed decision-making.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          How does it work?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            NutriGuide uses OCR to scan menus, employs an algorithm to classify food based on nutritional parameters, and utilizes a chatbot for personalized recommendations. The user-friendly interface ensures easy navigation, and stringent data privacy measures safeguard user information.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          How can I provide feedback or report any issues with the app?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            To share feedback or report issues with the NutriGuide app, go to the "Contact Us" page. Enter details about the problem in the text box or form, including device information. Click "Submit," and our support team will address the issue promptly. Your input is valuable for enhancing NutriGuide. Thank you!
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          How do I scan a physical menu using the app?          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            To scan a physical menu, click 'DineScan' in the navigation bar, upload a photo on the website, and let our OCR technology analyze it for health-conscious food choices. Easy and convenient!
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          Can NutriGuide provide recommendations for specific dietary restrictions or preferences, such as vegetarian or gluten- free Options    <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Absolutely! NutriGuide is designed to cater to specific dietary restrictions and preferences. Whether you're looking for vegetarian, gluten-free, or other dietary options, the app can provide personalized recommendations to align with your unique preferences. Enjoy a tailored and health-conscious dining experience with NutriGuide!
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          What languages are supported by the app?          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Certainly! NutriGuide is a multi-lingual app, supporting a variety of languages. You can navigate and interact with the app in the language of your choice, enhancing accessibility and ensuring a user-friendly experience for individuals from diverse linguistic backgrounds.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          this.parentElement.classList.toggle("active");
+
+          var pannel = this.nextElementSibling;
+
+          if (pannel.style.display === "block") {
+            pannel.style.display = "none";
+          } else {
+            pannel.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
