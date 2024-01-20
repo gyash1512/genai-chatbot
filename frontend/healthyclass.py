@@ -36,7 +36,6 @@ def decode_qr_code(image_path):
 # Example usage:
 image_path = sys.argv[1]
 decoded_texts = decode_qr_code(image_path)
-print(decoded_texts)
 import google.generativeai as palm
 
 def generate_response(text):
