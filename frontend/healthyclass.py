@@ -36,11 +36,11 @@ def decode_qr_code(image_path):
 # Example usage:
 image_path = sys.argv[1]
 decoded_texts = decode_qr_code(image_path)
-
+print(decoded_texts)
 import google.generativeai as palm
 
 def generate_response(text):
-    prompt = "Tell whether "+ text +" is healthy or not based upon nutritional information like calorie count, fats, sugar, protein content and give reason"
+    prompt = "Tell whether "+ text +" is healthy or not based upon nutritional information like calorie count, fats, sugar, protein content and give reason. The complete response should be precise and in not more than 100 words"
 
     apikey = "AIzaSyCVrjd8JXl1CDUlsuKxqBjBojieVcPaRUk"
     palm.configure(api_key=apikey)
@@ -61,8 +61,7 @@ def generate_response(text):
 if decoded_texts:
     res=" "
     for text in decoded_texts:
-        res+=generate_response(text)
-        res+"\n"
-    print(Markup(str(res)))   
+        res+=generate_response(text) +"\n"
+    print(res)   
 else:
     print("No QR code found in the image.") 
